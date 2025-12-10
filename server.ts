@@ -1,12 +1,7 @@
 import { serve } from "bun";
-import { readFile } from "fs/promises";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const PORT = process.env.PORT || 3000;
+const indexHtml = Bun.file("./index.html");
 
 const server = serve({
   port: PORT,
@@ -15,19 +10,7 @@ const server = serve({
 
     // Serve index.html for root path
     if (url.pathname === "/" || url.pathname === "/index.html") {
-      try {
-        const htmlPath = join(__dirname, "..", "index.html");
-        const html = await readFile(htmlPath, "utf-8");
-
-        return new Response(html, {
-          headers: {
-            "Content-Type": "text/html",
-          },
-        });
-      } catch (error) {
-        console.error("Error reading index.html:", error);
-        return new Response("Error loading page", { status: 500 });
-      }
+      return new Response(indexHtml);
     }
 
     // 404 for other paths
