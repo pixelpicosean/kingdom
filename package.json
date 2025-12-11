@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple canvas app served with Bun",
   "scripts": {
-    "dev": "bun run src/server.ts"
+    "dev": "bun run server.ts"
   },
   "type": "module",
   "engines": {
