@@ -1,7 +1,7 @@
 {
   "name": "kingdom-web",
-  "version": "1.0.0",
-  "description": "Simple canvas app served with Bun",
+  "version": "0.1.0",
+  "description": "A web-based kingdom-building game",
   "scripts": {
     "dev": "bun run server.ts"
   },

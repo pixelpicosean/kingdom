@@ -3,20 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Section 01 - Draw Rectangle</title>
+		<title>Template</title>
 		<style>
-			body {
+			* {
 				margin: 0;
 				padding: 0;
+				box-sizing: border-box;
+				font-family: sans-serif;
+			}
+			
+			body {
+				min-height: 100vh;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				min-height: 100vh;
+				
 				background-color: #f0f0f0;
 			}
-			canvas {
-				border: 1px solid #ccc;
-				background-color: white;
+			
+			#canvas {
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 			}
 		</style>
 	</head>
